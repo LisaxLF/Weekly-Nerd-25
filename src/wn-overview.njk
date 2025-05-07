@@ -1,0 +1,18 @@
+---
+title: Weekly Nerds Overview
+layout: _layouts/base.njk
+styles: ["homepage.css", "wn-overview.css"]
+permalink: /weekly-nerd-overview/
+---
+
+{% import "components/wn-card.njk" as card %}
+
+<div class="orange-square"></div>
+<section class="card-grid">
+  <div class="grid-card">
+    {% for item in collections.weeklyNerd %}
+      {{ card.renderWNCard(item.data) }}
+    {% endfor %}
+  </div>
+</section>
+

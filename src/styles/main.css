@@ -1,0 +1,67 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up base font and colors */
+body {
+    position: relative;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Utility classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Basic styling for links */
+a {
+    text-decoration: none;
+    font-family: var(--font-family-headers);
+    font-size: 1em;
+    color: var(--clr-white);
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+.orange-square {
+    background: var(--clr-primary-trans);
+    /* filter: blur(var(--filter-blur)); */
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: overlay;
+}
+
+/* typography */
+h1, h2, h3, h4, h5, h6, span {
+    font-family: var(--font-family-headers);
+    color: var(--clr-white);
+}
+
+p {
+    font-family: var(--font-family-text);
+    font-weight: 100;
+    color: var(--clr-white);
+}

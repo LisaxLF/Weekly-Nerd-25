@@ -1,0 +1,65 @@
+.card-grid,
+.orange-square {
+    grid-row: 2 / 5;
+    grid-column: 2 / 5;
+
+    width: 100%;
+    height: 100%;
+}
+
+.orange-square {
+    z-index: 0;
+
+    background: rgba(255, 153, 0, 0.49);
+    mix-blend-mode: hard-light;
+    backdrop-filter: blur(3px);
+}
+
+.card-grid {
+    z-index: 1;
+
+    .grid-card {
+        height: 100%;
+        width: 100%;
+        
+        display: grid;
+        grid-template-rows: 13.34% 18.51% 24.88%;
+    }
+}
+
+a.weekly-card {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .bg-text {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > .background-rectangle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            filter: blur(2px);
+        }
+
+        > .wn-description {
+            font-size: 1rem;
+        }
+    }
+
+    h3 {
+        text-transform: uppercase;
+        font-size: 3.5rem;
+
+        &:last-of-type {
+            text-align: right;
+        }
+    }
+}

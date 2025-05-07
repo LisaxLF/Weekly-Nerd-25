@@ -1,0 +1,10 @@
+{% macro renderWNCard(weeklyNerd) %}
+  <a href="{{ weeklyNerd.permalink }}" class="weekly-card">
+    <h3>{{ weeklyNerd.authorFirstName }}</h3>
+    <h3>{{ weeklyNerd.authorLastName }}</h3>
+    <div class="bg-text">
+        <div class="background-rectangle"></div>
+        <p class="wn-description">{{ weeklyNerd.description }}</p>
+    </div>
+  </a>
+{% endmacro %}

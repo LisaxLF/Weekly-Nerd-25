@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <link rel="stylesheet" href="../../styles/customprops.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="../../styles/grid-system.css">
+
+    {% if styles %}
+      {% for style in styles %}
+        <link rel="stylesheet" href="../../styles/{{ style }}">
+      {% endfor %}
+    {% endif %}
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <title>{{ title }}</title>
+  </head>
+  <body>
+      <div class="grid-overlay">
+        <svg class="grid-svg" viewBox="0 0 1280 832" preserveAspectRatio="none">
+          <line y1="195.5" x2="1280" y2="195.5" stroke="white" />
+          <line y1="306.5" x2="1280" y2="306.5" stroke="white" />
+          <line y1="460.5" x2="1280" y2="460.5" stroke="white" />
+          <line y1="667.5" x2="1280" y2="667.5" stroke="white" />
+        
+          <line x1="245.5" y1="0" x2="245.5" y2="832" stroke="white" />
+          <line x1="437.5" y1="0" x2="437.5" y2="832" stroke="white" />
+          <line x1="632.5" y1="0" x2="632.5" y2="832" stroke="white" />
+          <line x1="827.5" y1="0" x2="827.5" y2="832" stroke="white" />
+        
+          <line x1="152.731" y1="890.578" x2="827.731" y2="460.578" stroke="white" />
+          <line x1="-0.267975" y1="831.578" x2="826.732" y2="306.578" stroke="white" />
+          <line x1="246.233" y1="-0.442245" x2="828.233" y2="306.558" stroke="white" />
+          <line x1="438.224" y1="-0.446984" x2="827.224" y2="194.553" stroke="white" />
+        </svg>        
+      
+        <div class="grid-content">
+          <header>
+            {% include "header.njk" %}
+          </header>
+      
+          {{ content | safe }}
+        </div>
+      </div>
+  </body>
+</html>

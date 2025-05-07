@@ -1,0 +1,25 @@
+:root {
+    --clr-primary: #FF9900;
+    --clr-primary-trans: hsla(36, 100%, 50%, 0.6);
+    --clr-secondary: #636464;
+    --clr-secondary-trans: #63646495;
+    --clr-white: #FFFFFF;
+
+    --font-family-primary: "Moderustic", sans-serif;
+    --font-family-headers: "Boldonse", sans-serif;
+    --font-family-text: "Bounded", sans-serif;
+
+    --filter-blur: 4px;
+}
+
+@font-face {
+    font-family: "Bounded", sans-serif;
+    src: url("../assets/fonts/Bounded-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Bounded", sans-serif;
+    src: url("../assets/fonts/Bounded-ExtraLight.ttf") format("truetype");
+    font-weight: 100;
+}
