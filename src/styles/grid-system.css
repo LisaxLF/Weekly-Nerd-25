@@ -11,6 +11,8 @@
     display: grid;
     grid-template-columns: 19.18% 15% 15.23% 15.23% 35.35%;
     grid-template-rows: 23.49% 13.34% 18.51% 24.88% 19.77%;
+
+    overflow: hidden;
 }
 
 .grid-svg {

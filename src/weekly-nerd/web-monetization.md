@@ -4,7 +4,7 @@ description: "In deze Weekly Nerd sessie vertelt Peter Paul Koch over Web Moneti
 authorFirstName: "Peter Paul"
 authorLastName: "Koch" 
 date: 2025-02-28
-permalink: /weekly-nerd/{{ title | slug }}/
+permalink: /weekly-nerd/{{ title | slugify }}/
 ---
 
 # Weekly Nerd - Peter Paul Koch: *Pay the Web Forward met Web Monetization*

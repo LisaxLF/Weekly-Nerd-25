@@ -15,51 +15,94 @@
     backdrop-filter: blur(3px);
 }
 
-.card-grid {
-    z-index: 1;
+.card-controls {
+    height: 8cqh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 
-    .grid-card {
-        height: 100%;
-        width: 100%;
-        
-        display: grid;
-        grid-template-rows: 13.34% 18.51% 24.88%;
-    }
+    background-color: rgba(86, 86, 86, 0.15);
+    backdrop-filter: blur(2px);
 }
 
-a.weekly-card {
+.weekly-nerd-card {
     cursor: pointer;
     height: 100%;
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 13.34vh 18.51vh 24.88vh;
+    grid-template-columns: 15vw 15.23vw 15.23vw;
 
-    .bg-text {
-        position: relative;
+    h3 {
+        text-transform: uppercase;
+    }
+    
+    > h3:first-of-type {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    > h3:last-of-type {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    > .bg-text {
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        > .background-rectangle {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            filter: blur(2px);
-        }
-
-        > .wn-description {
-            font-size: 1rem;
-        }
+        backdrop-filter: blur(6px);
+        background-color: rgba(255, 255, 255, 0.15);
     }
+}
 
-    h3 {
-        text-transform: uppercase;
-        font-size: 3.5rem;
+/* SWIPER */
+.swiper-button-next,
+.swiper-button-prev {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
+}
 
-        &:last-of-type {
-            text-align: right;
-        }
-    }
+.swiper-button-next {
+    background-image: url('/assets/icons/next.svg');
+}
+
+.swiper-button-prev {
+    background-image: url('/assets/icons/back.svg');
+}
+
+.swiper-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+.swiper-slide-active {
+opacity: 1;
+}
+
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: all 300ms ease-in-out;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--clr-primary);
+    transform: scale(1.2);
 }

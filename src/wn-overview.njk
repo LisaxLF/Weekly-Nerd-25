@@ -5,14 +5,50 @@ styles: ["homepage.css", "wn-overview.css"]
 permalink: /weekly-nerd-overview/
 ---
 
-{% import "components/wn-card.njk" as card %}
+<!-- {% import "components/wn-card.njk" as card %} -->
 
 <div class="orange-square"></div>
-<section class="card-grid">
-  <div class="grid-card">
-    {% for item in collections.weeklyNerd %}
-      {{ card.renderWNCard(item.data) }}
+<div class="swiper-container card-grid">
+  <div class="swiper-wrapper">
+    {% for weeklyNerdPost in collections.weeklyNerd %}
+      <a href="/weekly-nerd/{{ weeklyNerdPost.data.title | slugify }}" class="swiper-slide">
+        <div class="weekly-nerd-card">
+          <h3>{{ weeklyNerdPost.data.authorFirstName }}</h3>
+          <h3>{{ weeklyNerdPost.data.authorLastName }}</h3>
+          <div class="bg-text">
+            <p class="wn-description">{{ weeklyNerdPost.data.description }}</p>
+          </div>
+        </div>
+      </a>
     {% endfor %}
   </div>
-</section>
+
+  <div class="card-controls">
+      <!-- Navigatie -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    loop: true,
+  });
+</script>
+
+
+
 
