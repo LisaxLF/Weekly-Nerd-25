@@ -7,6 +7,10 @@ module.exports = function(eleventyConfig) {
         });
     });
 
+    eleventyConfig.addCollection("progressReview", function(collectionApi) {
+        return collectionApi.getFilteredByGlob("src/progress-reviews/*.md");
+    });    
+
 
     return {
         dir: {
