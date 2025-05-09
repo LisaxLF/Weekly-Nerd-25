@@ -2,7 +2,7 @@
 title: "Progress Review 1"
 part: "( 1 / 2 )"
 description: "Een overzicht van mijn leerpunten aan het begin van de minor, met focus op technische groei, persoonlijke ontwikkeling en reflectie op eerdere ervaringen."
-permalink: /{{ title | slugify }}/
+permalink: /progress-reviews/{{ title | slugify }}/
 ---
 
 # Leerpunten Minor
