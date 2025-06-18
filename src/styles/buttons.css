@@ -1,5 +1,4 @@
 .btn-header-el {
-    display: inline-flex;
     padding: .6em 1.2em;
     font-size: .75em;
     transition: background 120ms ease-in-out;
@@ -17,4 +16,11 @@
 
 .btn-secondary {
 
+}
+
+.back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }

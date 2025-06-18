@@ -2,19 +2,19 @@
 title: Weekly Nerds Overview
 layout: _layouts/base.njk
 styles: ["homepage.css", "overview.css"]
-permalink: /weekly-nerd-overview/
+permalink: /reflections/
 ---
 
 <div class="orange-square"></div>
-<div class="swiper-container card-grid weekly-nerd-card">
+<div class="swiper-container card-grid progress-review-card">
   <div class="swiper-wrapper">
-    {% for weeklyNerdPost in collections.weeklyNerd %}
-      <a href="/weekly-nerd/{{ weeklyNerdPost.data.title | slugify }}" class="swiper-slide">
+    {% for reflectionData in collections.reflections %}
+      <a href="/progress-reviews/{{ reflectionData.data.title | slugify }}" class="swiper-slide">
         <div class="overview-card">
-          <h3>{{ weeklyNerdPost.data.authorFirstName }}</h3>
-          <h3>{{ weeklyNerdPost.data.authorLastName }}</h3>
+          <h3>{{ reflectionData.data.title }}</h3>
+          <h3>{{ reflectionData.data.part }}</h3>
           <div class="bg-text">
-            <p class="wn-description">{{ weeklyNerdPost.data.description }}</p>
+            <p class="wn-description">{{ reflectionData.data.description }}</p>
             <p>read more</p>
           </div>
         </div>
@@ -47,7 +47,3 @@ permalink: /weekly-nerd-overview/
     loop: true,
   });
 </script>
-
-
-
-

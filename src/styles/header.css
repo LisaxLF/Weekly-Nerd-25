@@ -16,6 +16,37 @@ nav ul {
     display: flex;
     justify-content: space-between;
     max-width: 30em;
-    gap: 1em;
+    gap: .5em;
     flex-wrap: wrap;
+}
+
+.btn-header-el {
+    display: inline-flex;
+}
+
+.btn-header-el.hamburger {
+    display: none;
+    opacity: 0;
+}
+
+@media (max-width: 900px) {
+    header {
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav {
+        display: inline-flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        display: none;
+        opacity: 0;
+    }
+
+    .btn-header-el.hamburger {
+        display: inline-flex;
+        opacity: 1;
+    }
 }

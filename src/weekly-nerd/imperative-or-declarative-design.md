@@ -5,20 +5,22 @@ authorFirstName: "Jeremy"
 authorLastName: "Keith" 
 date: 2025-03-12
 permalink: /weekly-nerd/{{ title | slugify }}/
+layout: _layouts/detail-page.njk
+styles: ["detail-page.css"]
 ---
 
-# Weekly Nerd - Jeremy Keith: *Declarative Design*
+## Weekly Nerd - Jeremy Keith: *Declarative Design*
 
 Tijdens een inspirerende talk van Jeremy Keith werd ik meegenomen in de wereld van *Declarative Design*. Het was geen technische uitleg alleen, maar juist een filosofische benadering van hoe we als makers omgaan met ontwerpen, coderen en zelfs samenwerken.
 
-## Twee muzikale benaderingen
+### Twee muzikale benaderingen
 
 Jeremy begon met een mooie metafoor: het verschil tussen klassieke en jazzmuziek. Bij een klassieke compositie ligt alles vast: een groot vel vol genoteerde noten die precies aangeven wat er moet gebeuren. Daar tegenover staat jazz, waarbij er wel een startpunt is, maar de uitvoering ontstaat in het moment. Deze muzikale vergelijking legde hij naast twee programmeerparadigma’s:
 
 - **Imperative Programming** – zoals klassieke muziek: je geeft de computer stap voor stap instructies.
 - **Declarative Programming** – zoals jazz: je beschrijft het gewenste resultaat, en laat het systeem zelf bepalen hoe dat moet gebeuren.
 
-## Imperatief versus Declaratief
+### Imperatief versus Declaratief
 
 **Imperatief programmeren** draait om controle. Jij vertelt exact wat de computer moet doen, in welke volgorde, en met welke tussenstappen.
 
@@ -32,11 +34,15 @@ Jeremy koppelde deze principes aan het web:
 
 Daarbij zei hij iets dat me is bijgebleven:
 
+<br>
+
 > *"JavaScript should only do what only JavaScript can do."*
+
+<br>
 
 Met andere woorden: gebruik HTML als het in HTML kan, gebruik CSS als het in CSS kan. Pas als het echt nodig is, gebruik je JavaScript. Deze denkwijze dwingt je om bewuster te kiezen voor eenvoud, duurzaamheid en veerkracht in je code.
 
-## Controle of vertrouwen?
+### Controle of vertrouwen?
 
 Een belangrijk punt in de talk ging over controle. Imperatief werken betekent totale controle houden, declaratief werken betekent controle loslaten en vertrouwen op het systeem. Je stelt grenzen en voorwaarden, maar laat ruimte voor interpretatie door de machine.
 
@@ -48,7 +54,7 @@ Welke manier beter is? Dat hangt af van meerdere factoren:
 - De **samenstelling van het team**
 - En het **medium** waarin je werkt
 
-## Verschillende manieren van denken
+### Verschillende manieren van denken
 
 Tot slot bracht Jeremy twee manieren van denken naar voren:
 
@@ -57,7 +63,7 @@ Tot slot bracht Jeremy twee manieren van denken naar voren:
 
 Beide benaderingen zijn waardevol – en soms zelfs nodig – afhankelijk van de context.
 
-## Mijn reflectie
+### Mijn reflectie
 
 Ik vond deze talk van Jeremy Keith echt bijzonder. Het zette me aan het denken over hoe ik zelf werk, denk en samenwerk. Ik had nog nooit op deze manier naar code en ontwerp gekeken. Vooral het idee dat je controle kunt loslaten en toch tot een goed resultaat komt, spreekt me aan.
 

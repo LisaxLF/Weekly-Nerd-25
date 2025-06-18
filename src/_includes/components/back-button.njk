@@ -1,0 +1,17 @@
+{% macro backButton(id) %}
+  <a href="#" class="back-button {{ id }}">
+    <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M-4.5897e-07 10.5L19 -2.73787e-06L19 21L-4.5897e-07 10.5Z" fill="white"/>
+    </svg>
+    back to overview
+  </a>
+{% endmacro %}
+
+<script>
+  const backButton = document.querySelector('.back-button')
+  if (backButton) {
+    backButton.addEventListener('click', e => {
+      window.history.back()
+    })
+  }
+</script>

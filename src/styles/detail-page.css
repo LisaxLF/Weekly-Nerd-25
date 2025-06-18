@@ -1,0 +1,130 @@
+.grid-content {
+    overflow-y: auto;
+}
+
+.md-content {
+    background-color: var(--clr-bg);
+    height: max-content;
+    grid-row: 5 / 6;
+    grid-column: 1 / 6;
+
+    display: grid;
+    grid-template-columns: var(--grid-template-columns);
+    
+    z-index: 10;
+}
+
+.md-content-wrapper {
+    grid-column: 2 / 5;
+
+    padding: 4rem 0;
+}
+
+h1 {
+    color: var(--clr-primary);
+    z-index: 10;
+
+    line-height: clamp(1rem, 6rem, 8rem); 
+    font-size: clamp(2rem, 4rem, 6rem);
+    text-transform: uppercase;
+}
+
+h2, h3, h4, p, ol, ul, li, span {
+    font-family: var(--font-family-text);
+    color: white;
+}
+
+span {
+    color: var(--clr-primary);
+    font-weight: 300;
+    font-size: 1.125rem;
+}
+
+h2 { 
+    font-size: 2rem;
+    font-weight: 900;
+
+    margin-bottom: 2rem;
+}
+
+h3 { 
+    font-size: 1.6rem;
+    margin: 1.25rem 0 1rem 0;
+
+    &:not(:first-of-type) {
+        margin: 2.25rem 0 1rem 0;
+    }
+}
+
+h4 { 
+    font-size: 1.25rem;
+    margin: 1rem 0 .6rem 0;
+}
+
+p { 
+    font-size: 1rem;
+}
+
+.md-content-wrapper ol,
+.md-content-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.25rem 0 1rem 0;
+}
+
+.md-content-wrapper li {
+    color: var(--clr-white);
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.md-content-wrapper strong {
+    color: var(--clr-primary);
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: .5rem;
+}
+
+.title-wrapper-part {
+    grid-row: 3;
+    grid-column: 2 / 5;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: start;
+    justify-content: start;
+
+    &:nth-of-type(2) {
+        grid-row: 4;  
+
+        align-items: start;
+        justify-content: end;
+
+        > h1 {
+            line-height: clamp(1rem, 6.8rem, 8rem);
+            font-size: clamp(2rem, 4.5rem, 6rem);
+        }
+    }
+}
+
+.title-wrapper-part.author {
+    h1 {
+        line-height: clamp(1rem, 8rem, 8rem); 
+        font-size: clamp(2rem, 6rem, 6rem);
+    }
+
+    &:nth-of-type(2) {
+        > h1 {
+            line-height: clamp(1rem, 7rem, 8rem);
+            font-size: clamp(2rem, 5rem, 6rem);
+        }
+    }
+}
+
+
+.back-button {
+        grid-row: 2;
+}
