@@ -102,3 +102,48 @@ p {
     display: flex;
     align-items: center;
 }
+
+@media (max-width: 900px) {
+    .big-txt,
+    .small-txt {
+        display: none;
+    }
+
+    /* PLACEMENT GRID */
+    h1:first-of-type {
+        grid-column: 1 / 5;
+        grid-row: 2;
+
+        justify-self: center;
+        font-size: clamp(5rem, 3.9038rem + 4.6154vw, 6.5rem);
+    }
+
+    h1:last-of-type {
+        grid-column: 2 / 3;
+        grid-row: 3;
+
+        justify-self: center;
+        font-size: clamp(4.5rem, 3.9038rem + 4.6154vw, 5.5rem);
+    }
+
+    section.year {
+        grid-column: 2 / 3;
+        grid-row: 4;
+
+        span {
+            font-size: clamp(3.5rem, 3rem + 4.6154vw, 5rem);
+        }
+    }
+
+    section.palette {
+        grid-column: 2 / 3;
+        grid-row: 3;
+
+        justify-content: center;
+        flex-direction: row;
+
+        .palette-wrapper {
+            flex-direction: row;
+        }
+    }
+}

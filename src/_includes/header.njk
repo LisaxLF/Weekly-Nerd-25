@@ -1,15 +1,45 @@
 <nav>
-    <ul>
+    <ul> 
+        <li><a class="btn-header-el" href="/">Home</a></li>
         <li><a class="btn-header-el" href="/weekly-nerd-overview/">Weekly Nerds</a></li>
         <li><a class="btn-header-el" href="/progress-review-overview/">Progress</a></li>
         <li><a class="btn-header-el" href="/reflections/">Reflections</a></li>
-        <li><a class="btn-header-el" href="/hackhaton/">Hackhaton</a></li>
+        <li><a class="btn-header-el" href="https://github.com/lynnwolters/css-day-hackathon" target="_blank" >Hackhaton</a></li>
     </ul>
-    <a href="" class="btn-header-el hamburger">
+    <a class="btn-header-el hamburger">
         <svg width="30" height="19" viewBox="0 0 30 19" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L30 0V4L0 4V0Z" fill="white"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 7L30 7V11L0 11V7Z" fill="white"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M0 15L30 15V19L0 19V15Z" fill="white"/>
         </svg>
     </a>
+    <ul class="navbar-side">
+        <a class="btn-header-el close">
+            <svg width="30" height="19" viewBox="0 0 30 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line x1="3" y1="3" x2="27" y2="16" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                <line x1="27" y1="3" x2="3" y2="16" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+        </a>
+        <li><a class="btn-header-el" href="/">Home</a></li>
+        <li><a class="btn-header-el" href="/weekly-nerd-overview/">Weekly Nerds</a></li>
+        <li><a class="btn-header-el" href="/progress-review-overview/">Progress</a></li>
+        <li><a class="btn-header-el" href="/reflections/">Reflections</a></li>
+        <li><a class="btn-header-el" href="https://github.com/lynnwolters/css-day-hackathon" target="_blank" >Hackhaton</a></li>
+    </ul>
 </nav>
+
+<script>
+    const btnHamburger = document.querySelector('.btn-header-el.hamburger')
+    const btnClose = document.querySelector('.btn-header-el.close')
+    const navBarSide = document.querySelector('.navbar-side')
+
+    console.log(btnHamburger)
+
+    btnHamburger.addEventListener('click', () => {
+        navBarSide.classList.add('active')
+    })
+
+    btnClose.addEventListener('click', () => {
+        navBarSide.classList.remove('active')
+    })
+</script>

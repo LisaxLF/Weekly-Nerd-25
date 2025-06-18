@@ -185,3 +185,55 @@
 .swiper-slide-active:hover {
     outline: 5px solid var(--clr-white);
 }
+
+@media (max-width: 900px) {
+    .card-grid,
+    .orange-square {
+        grid-row: 2 / 5;
+        grid-column: 2 / 3;
+    }
+    
+    .overview-card {
+        grid-template-rows: 15vh 20vh 25vh;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .card-grid,
+    .orange-square {
+        grid-row: 2 / 5;
+        grid-column: 1 / 4;
+    }
+
+    .overview-card {
+        h3 {
+            text-align: center;
+            justify-self: center;
+        }
+    }
+
+    .weekly-nerd-card .overview-card {
+        > h3:first-of-type {
+            line-height: clamp(7rem, 0.6852rem + 11.8519vw, 8.5rem);
+            font-size: clamp(3.5rem, 0.6852rem + 11.8519vw, 5.5rem);
+        }
+
+        > h3:last-of-type {
+            line-height: clamp(7rem, 0.6852rem + 11.8519vw, 8.5rem);
+            font-size: clamp(3rem, 0.6852rem + 11.8519vw, 4.5rem);
+        }
+    }
+
+    .progress-review-card .overview-card {
+        > h3:first-of-type {
+            line-height: clamp(7rem, 0.6852rem + 11.8519vw, 8.5rem);
+            font-size: clamp(3rem, 0.6852rem + 11.8519vw, 3rem);
+        }
+
+        > h3:last-of-type {
+            line-height: clamp(7rem, 0.6852rem + 11.8519vw, 8.5rem);
+            font-size: clamp(3rem, 0.6852rem + 11.8519vw, 5rem);
+        }
+    }
+}

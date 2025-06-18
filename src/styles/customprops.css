@@ -13,6 +13,9 @@
     --grid-template-rows: 23.49% 13.34% 18.51% 24.88% 19.77%;
     --grid-template-columns: 19.18% 15% 15.23% 15.23% 35.35%;
 
+    --grid-template-columns-s: 15% 70% 15%;
+    --grid-template-rows-s: 25% 15% 20% 25% 25%;
+
     --filter-blur: 4px;
 }
 
